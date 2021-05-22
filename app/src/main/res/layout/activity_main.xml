@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/hstText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Hawaiian Standard Time (HST): "
+        android:textSize="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/hstClock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000000"/>
+
+    <TextClock
+        android:id="@+id/hstClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-10"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hstText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hstText"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+    <TextView
+        android:id="@+id/hdtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Hawaii-Aleutian Daylight Time (HDT): "
+        android:textSize="19dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hstText" />
+
+    <TextView
+        android:id="@+id/akdtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Alaska Daylight Time (AKDT): "
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hdtText"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/pdtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Pacific Daylight Time (PDT): "
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/akdtText"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/mstTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Mountain Standard Time (MST): "
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pdtText"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/mdtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Mountain Daylight Time (MDT): "
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mstTime"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/cdtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Central Daylight Time (CDT): "
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mdtText"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/edtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Eastern Daylight Time (EDT): "
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cdtText"
+        android:textColor="#000000"/>
+
+    <TextClock
+        android:id="@+id/hdtClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hdtText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hdtText"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+    <TextClock
+        android:id="@+id/akdtClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/akdtText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/akdtText"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+    <TextClock
+        android:id="@+id/pdtClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pdtText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pdtText"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+    <TextClock
+        android:id="@+id/mstClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mstTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mstTime"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+    <TextClock
+        android:id="@+id/mdtClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-6"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mdtText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mdtText"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+    <TextClock
+        android:id="@+id/cdtClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-5"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cdtText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cdtText"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+    <TextClock
+        android:id="@+id/edtClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm a"
+        android:timeZone="GMT-4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtText"
+        android:textColor="#000000"
+        android:textSize="19dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
